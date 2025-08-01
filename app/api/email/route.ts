@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const data = await resend.emails.send({
-      from: 'Clinica <info@clinica.pk>', // Must be a verified sender domain
+      from: 'Clinica <info@clinica.pk>',
       to: 'nizam9671@gmail.com',
       subject: body.subject || 'Booking Request',
       html: `<p>${body.message}</p>`,
