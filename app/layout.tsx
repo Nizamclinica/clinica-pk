@@ -1,6 +1,9 @@
+import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
+
 export const metadata = {
-  title: 'Clinica.pk',
-  description: 'Book doctors, buy medicine, and more!',
+  title: "Clinica.pk",
+  description: "Book doctors, buy medicine, and more!",
 };
 
 export default function RootLayout({
@@ -10,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <CartProvider>
+          {children}
+        </CartProvider>
+      </body>
     </html>
   );
 }
