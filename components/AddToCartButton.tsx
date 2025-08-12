@@ -1,6 +1,5 @@
 "use client";
-
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/cartcontext";
 
 type AddToCartButtonProps = {
   product: {
@@ -17,7 +16,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
   return (
     <button
       onClick={() => addToCart(product)}
-      className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
     >
       Add to Cart
     </button>
